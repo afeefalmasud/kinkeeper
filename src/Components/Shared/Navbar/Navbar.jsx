@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <div className='shadow-md'>
       <div className='container mx-auto'>
-        <div className="navbar">
+        <div className="navbar flex flex-col md:flex-row">
           <div className="flex-1">
             <img src="/assets/logo.png" alt="" />
           </div>

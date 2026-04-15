@@ -1,7 +1,8 @@
 import React from 'react'
-import { Navbar } from '../Navbar/Navbar'
+
 import { Outlet } from 'react-router'
-import { Footer } from '../Footer/Footer'
+import { Navbar } from '../Components/Shared/Navbar/Navbar'
+import { Footer } from '../Components/Shared/Footer/Footer'
 
 export const Root = () => {
   return (
