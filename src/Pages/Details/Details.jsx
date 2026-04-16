@@ -4,7 +4,7 @@ import { TbArchive } from 'react-icons/tb';
 import { useLoaderData, useParams } from 'react-router'
 
 export const Details = () => {
-  const {id} = useParams('details/:id')
+  const {id} = useParams()
   const cardDetails = useLoaderData();
   const friend = cardDetails.find(cardDetail => cardDetail.id === parseInt(id));
   const statusStyle = {
@@ -16,6 +16,7 @@ export const Details = () => {
     <div className='bg-[#F8FAFC]'>
       <div className='container mx-auto py-30 min-h-screen px-6 md:px-0'>
         <div className='grid gap-4 md:gap-8 grid-cols-3 lg:grid-cols-5 grid-rows-4 lg:grid-rows-3'>
+
           <div className='space-y-3 p-8 flex flex-col items-center justify-center shadow-md rounded-md col-span-3 md:col-span-2 md:row-span-3 row-span-2 lg:row-span-2'>
             <img className="rounded-full mb-3" src={friend.picture} alt="" />
             <h2 className="text-[#1F2937] text-[20px] font-semibold">{friend.name}</h2>
@@ -36,20 +37,19 @@ export const Details = () => {
             <p className='text-[#64748B] text-[14px]'>Email: {friend.email}</p>
           </div>
 
-          <div className='order-2 md:order-1 p-8 shadow-md rounded-md flex flex-col items-center justify-center'>
-            <h2 className='text-[#244D3F] font-semibold text-[32px]'>{friend.days_since_contact}</h2>
+          <div className='order-2 md:order-1 p-4 md:p-8 shadow-md rounded-md flex flex-col items-center justify-center'>
+            <h2 className='text-[#244D3F] font-semibold text-[24px] md:text-[32px]'>{friend.days_since_contact}</h2>
             <p className='text-[18px] text-[#64748B]'>Days Since Contact</p>
           </div>
           <div className='order-2 md:order-1 p-8 shadow-md rounded-md flex flex-col items-center justify-center'>
-            <h2 className='text-[#244D3F] font-semibold text-[32px]'>{friend.goal}</h2>
+            <h2 className='text-[#244D3F] font-semibold text-[24px] md:text-[32px]'>{friend.goal}</h2>
             <p className='text-[18px] text-[#64748B]'>Goal (Days)</p>
           </div>
           <div className='order-2 md:order-1 p-8 shadow-md rounded-md flex flex-col items-center justify-center'>
-            <h2 className='text-[#244D3F] font-semibold text-[32px]'>{friend.next_due_date}</h2>
+            <h2 className='text-[#244D3F] font-semibold text-[24px] md:text-[32px]'>{friend.next_due_date}</h2>
             <p className='text-[18px] text-[#64748B]'>Next Due</p>
           </div>
           
-
           <div className='p-8 rounded-md shadow-md md:col-span-2 col-span-3 lg:col-span-3 flex flex-col justify-center order-3 lg:order-2'>
             <div className='flex justify-between mb-5'>
               <p className='font-medium text-[#244D3F] text-[20px]'>Relationship Goal</p>
@@ -90,9 +90,9 @@ export const Details = () => {
               </button>
             </div>
           </div>
+
         </div>
       </div>
     </div>
-    
   )
 }
