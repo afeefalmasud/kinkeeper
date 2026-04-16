@@ -6,6 +6,7 @@ import { Timeline } from "../Pages/Timeline/Timeline";
 import { Card } from "../Components/Card/Card";
 import { Details } from "../Pages/Details/Details";
 import { Info } from "../Components/Info/Info";
+import { Error } from "../Pages/Error/Error";
 
 const cardPromise = fetch("/friends.json").then((res) =>res.json());
 const infoPromise = fetch("/friends.json").then((res) =>res.json());
@@ -37,6 +38,7 @@ export const router = createBrowserRouter([
         loader: () => fetch("/friends.json"),
         Component: Details
       }
-    ]
+    ],
+    errorElement: <Error></Error>
   }
 ])
