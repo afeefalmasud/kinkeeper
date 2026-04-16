@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { use } from 'react'
 import { Card } from '../../Components/Card/Card'
+import { Info } from '../../Components/Info/Info';
+
 const cardPromise = fetch("/friends.json").then((res) =>res.json());
+const infoPromise = fetch("/friends.json").then((res) =>res.json());
 
 export const Home = () => {
   return (
@@ -13,7 +16,11 @@ export const Home = () => {
             relationships that matter most.</p>
             <button className='btn bg-[#244D3F] text-[#ffffff] hover:border-2 border-[#244D3F] hover:text-[#244D3F] hover:bg-[#ffffff] transition'><i className="fa-solid fa-plus"></i>Add a Friend</button>
           </div>
-          <div>
+          <div className='py-10 border-[#dadada74] border-b-3'>
+            <Info infoPromise={infoPromise}></Info>
+          </div>
+          <div className='py-10'>
+            <h2 className='text-[#1F2937] font-semibold text-[24px] pb-6'>Your Friends</h2>
             <Card cardPromise={cardPromise}></Card>
           </div>
         </div>

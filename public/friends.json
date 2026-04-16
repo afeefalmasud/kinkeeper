@@ -29,7 +29,7 @@
     "picture": "https://randomuser.me/api/portraits/men/3.jpg",
     "email": "liam@example.com",
     "days_since_contact": 13,
-    "status": "almost due",
+    "status": "overdue",
     "tags": ["gym", "fitness"],
     "bio": "Gym partner. Keeps me motivated.",
     "goal": 14,
