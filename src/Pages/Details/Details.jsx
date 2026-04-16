@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { RiDeleteBin6Line, RiNotificationSnoozeLine } from 'react-icons/ri';
 import { TbArchive } from 'react-icons/tb';
 import { useLoaderData, useParams } from 'react-router'
+import { TimeLineContext } from '../../Context/TimeLineContext';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
 
 export const Details = () => {
   const {id} = useParams()
@@ -12,6 +14,29 @@ export const Details = () => {
     "almost due" : "bg-[#EFAD44]",
     "on-track" : "bg-[#244D3F]"
   }
+  const {interections,setInterections} = useContext(TimeLineContext);
+  const handleCall = () => {
+    setInterections((prev) => [...prev, {...friend, type:"call"}]);
+    toast.success(`Call with ${friend.name}`, {
+      position: "top-center",
+      transition: Bounce,
+    });
+  }
+  const handleText = () => {
+    setInterections((prev) => [...prev, {...friend, type:"text"}]);
+    toast.success(`Text with ${friend.name}`, {
+      position: "top-center",
+      transition: Bounce,
+    });
+  }
+  const handleVideo = () => {
+    setInterections((prev) => [...prev, {...friend, type:"video"}]);
+    toast.success(`Video with ${friend.name}`, {
+      position: "top-center",
+      transition: Bounce,
+    });
+  }
+
   return (
     <div className='bg-[#F8FAFC]'>
       <div className='container mx-auto py-30 min-h-screen px-6 md:px-0'>
@@ -76,18 +101,19 @@ export const Details = () => {
           <div className='p-8 rounded-md shadow-md col-span-3 order-4'>
             <p className='font-medium text-[#244D3F] text-[20px] mb-4'>Quick Check-In</p>
             <div className='flex gap-4 flex-col lg:flex-row flex-wrap'>
-              <button className=' flex flex-col items-center px-20 py-6 bg-[#efeff0] rounded-lg shadow-sm space-y-2.5'>
+              <button onClick={handleCall} className=' flex flex-col items-center px-20 py-6 bg-[#efeff0] rounded-lg shadow-sm space-y-2.5 cursor-pointer'>
                 <i className="fa-solid fa-phone-volume text-[#1F2937] text-3xl"></i>
                 <p className='text-[18px] text-[#1F2937]'>Call</p>
               </button>
-              <button className=' flex flex-col items-center px-20 py-6 bg-[#efeff0] rounded-lg shadow-sm space-y-2.5'>
+              <button onClick={handleText} className=' flex flex-col items-center px-20 py-6 bg-[#efeff0] rounded-lg shadow-sm space-y-2.5 cursor-pointer'>
                 <i className="fa-solid fa-paper-plane text-[#1F2937] text-3xl"></i>
                 <p className='text-[18px] text-[#1F2937]'>Text</p>
               </button>
-              <button className=' flex flex-col items-center px-19 py-6 bg-[#efeff0] rounded-lg shadow-sm space-y-2.5'>
+              <button onClick={handleVideo} className=' flex flex-col items-center px-19 py-6 bg-[#efeff0] rounded-lg shadow-sm space-y-2.5 cursor-pointer'>
                 <i className="fa-solid fa-video text-[#1F2937] text-3xl"></i>
                 <p className='text-[18px] text-[#1F2937]'>Video</p>
               </button>
+              <ToastContainer/>
             </div>
           </div>
 
