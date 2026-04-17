@@ -42,7 +42,7 @@ export const Details = () => {
       <div className='container mx-auto py-30 min-h-screen px-6 md:px-0'>
         <div className='grid gap-4 md:gap-8 grid-cols-3 lg:grid-cols-5 grid-rows-4 lg:grid-rows-3'>
 
-          <div className='space-y-3 p-8 flex flex-col items-center justify-center shadow-md rounded-md col-span-3 md:col-span-2 md:row-span-3 row-span-2 lg:row-span-2'>
+          <div className='space-y-3 p-8 flex flex-col items-center justify-center shadow-lg rounded-md col-span-3 md:col-span-2 md:row-span-3 row-span-2 lg:row-span-2 bg-white'>
             <img className="rounded-full mb-3" src={friend.picture} alt="" />
             <h2 className="text-[#1F2937] text-[20px] font-semibold">{friend.name}</h2>
             <ul className="flex gap-2 flex-wrap">
@@ -62,20 +62,20 @@ export const Details = () => {
             <p className='text-[#64748B] text-[14px]'>Email: {friend.email}</p>
           </div>
 
-          <div className='order-2 md:order-1 p-4 md:p-8 shadow-md rounded-md flex flex-col items-center justify-center'>
+          <div className='order-2 md:order-1 p-4 md:p-8 shadow-lg rounded-md flex flex-col items-center justify-center bg-white'>
             <h2 className='text-[#244D3F] font-semibold text-[24px] md:text-[32px]'>{friend.days_since_contact}</h2>
             <p className='text-[18px] text-[#64748B]'>Days Since Contact</p>
           </div>
-          <div className='order-2 md:order-1 p-8 shadow-md rounded-md flex flex-col items-center justify-center'>
+          <div className='order-2 md:order-1 p-8 shadow-lg rounded-md flex flex-col items-center justify-center bg-white'>
             <h2 className='text-[#244D3F] font-semibold text-[24px] md:text-[32px]'>{friend.goal}</h2>
             <p className='text-[18px] text-[#64748B]'>Goal (Days)</p>
           </div>
-          <div className='order-2 md:order-1 p-8 shadow-md rounded-md flex flex-col items-center justify-center'>
+          <div className='order-2 md:order-1 p-8 shadow-lg rounded-md flex flex-col items-center justify-center bg-white'>
             <h2 className='text-[#244D3F] font-semibold text-[24px] md:text-[32px]'>{friend.next_due_date}</h2>
             <p className='text-[18px] text-[#64748B]'>Next Due</p>
           </div>
           
-          <div className='p-8 rounded-md shadow-md md:col-span-2 col-span-3 lg:col-span-3 flex flex-col justify-center order-3 lg:order-2'>
+          <div className='p-8 rounded-md shadow-lg md:col-span-2 col-span-3 lg:col-span-3 flex flex-col justify-center order-3 lg:order-2 bg-white'>
             <div className='flex justify-between mb-5'>
               <p className='font-medium text-[#244D3F] text-[20px]'>Relationship Goal</p>
               <button className='btn'>Edit</button>
@@ -83,22 +83,22 @@ export const Details = () => {
             <p className='text-[#64748B] text-[18px]'>Connect Every <span className='text-[#1F2937] font-bold'>{friend.goal} days</span></p>
           </div>
             
-          <div className='col-span-3 md:col-span-1 lg:col-span-2 space-y-5 order-1 lg:order-3'>
-            <div className='flex gap-2 items-center justify-center py-4 rounded-lg border-3 border-[#dadada74] cursor-pointer'>
+          <div className='col-span-3 md:col-span-1 lg:col-span-2 space-y-5 order-1 lg:order-3 '>
+            <div className='flex gap-2 items-center justify-center py-4 rounded-lg border-3 border-[#dadada74] cursor-pointer bg-white'>
               <RiNotificationSnoozeLine className='text-[20px]'/>
               <p className='text-[#1F2937] font-medium'>Snooze 2 weeks</p>
             </div>
-            <div className='flex gap-2 items-center justify-center py-4 rounded-lg border-3 border-[#dadada74] cursor-pointer'>
+            <div className='flex gap-2 items-center justify-center py-4 rounded-lg border-3 border-[#dadada74] cursor-pointer bg-white'>
               <TbArchive className='text-[20px]' />
               <p className='text-[#1F2937] font-medium'>Archive</p>
             </div>
-            <div className='flex gap-2 items-center justify-center  py-4 rounded-lg border-3 border-[#dadada74] cursor-pointer text-[#EF4444]'>
+            <div className='flex gap-2 items-center justify-center  py-4 rounded-lg border-3 border-[#dadada74] cursor-pointer text-[#EF4444] bg-white'>
               <RiDeleteBin6Line className='text-[20px]'/>
               <p className='font-medium'>Delete</p>
             </div>
           </div>
           
-          <div className='p-8 rounded-md shadow-md col-span-3 order-4'>
+          <div className='p-8 rounded-md shadow-lg col-span-3 order-4 bg-white'>
             <p className='font-medium text-[#244D3F] text-[20px] mb-4'>Quick Check-In</p>
             <div className='flex gap-4 flex-col lg:flex-row flex-wrap'>
               <button onClick={handleCall} className=' flex flex-col items-center px-20 py-6 bg-[#efeff0] rounded-lg shadow-sm space-y-2.5 cursor-pointer'>

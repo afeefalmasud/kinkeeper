@@ -10,7 +10,7 @@ export const Card = ({cardPromise}) => {
   return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {cards.map((card, id) =>(
-            <Link to={`/details/${card.id}`} key={id} className="space-y-3 p-6 flex flex-col items-center shadow-md rounded-md">
+            <Link to={`/details/${card.id}`} key={id} className="space-y-3 p-6 flex flex-col items-center shadow-lg rounded-lg bg-[#ffffff]">
               <img className="rounded-full mb-3" src={card.picture} alt="" />
               <h2 className="text-[#1F2937] text-[20px] font-semibold">{card.name}</h2>
               <p className="text-[#64748B] text-[12px]">{card.days_since_contact}d ago</p>

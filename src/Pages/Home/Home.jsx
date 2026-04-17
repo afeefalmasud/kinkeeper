@@ -1,4 +1,4 @@
-import React, { use } from 'react'
+import React, { Suspense, use } from 'react'
 import { Card } from '../../Components/Card/Card'
 import { Info } from '../../Components/Info/Info';
 
@@ -21,7 +21,13 @@ export const Home = () => {
           </div>
           <div className='py-10'>
             <h2 className='text-[#1F2937] font-semibold text-[24px] pb-6'>Your Friends</h2>
-            <Card cardPromise={cardPromise}></Card>
+            <Suspense fallback={
+              <div className='flex items-center justify-center'>
+                <span className="loading loading-dots loading-xl"></span>
+              </div>
+            }>
+              <Card cardPromise={cardPromise}></Card>
+            </Suspense>
           </div>
         </div>
       </div>
