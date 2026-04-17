@@ -1,16 +1,58 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📒 Kin Keeper
 
-Currently, two official plugins are available:
+A smart relationship tracking system that helps you stay connected with the people who matter.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Kin Keeper is a lightweight productivity and relationship management app designed to help users track interactions with friends, family, and contacts. It keeps a clean timeline of calls, texts, and video interactions while providing simple analytics to understand communication habits.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Live Demo
+https://kin-keeper-nine.vercel.app/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+* ⚛️ React.js
+* 🎯 JavaScript (ES6+)
+* 🧠 Context API (State Management)
+* 🎨 Tailwind CSS
+* 📦 JSON
+
+
+---
+
+## ✨ Core Features
+
+📅 Smart Interaction Timeline
+
+A clean timeline view of all interactions including:
+
+* Calls 📞
+* Texts 💬
+* Video Chats 🎥
+
+Each entry shows:
+
+* Contact name
+* Interaction type
+* Timestamp
+
+📊 Interaction Analytics
+
+Real-time breakdown of user activity:
+
+* Total Calls Made
+* Total Text Messages Sent
+* Total Video Calls
+
+⏰ Contact Health Tracking
+
+Keeps relationships active by tracking:
+
+* Days since last contact
+* Next due reminder date
+* Engagement status (On-track / Almost due / Overdue)
+
+
